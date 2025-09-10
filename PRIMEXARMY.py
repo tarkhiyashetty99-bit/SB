@@ -9,18 +9,18 @@ init(autoreset=True)
 
 # ================== CONFIG ==================
 VERSION = "v1.0"
-ADMIN_USERNAME = "@your_admin"
-CHANNEL_USERNAME = "@your_channel"
-MADE_BY = "🔥 PRIMEXARMY 🔥"
-OWNER = "# PRIMEXARMY111"
+ADMIN_USERNAME = "@GOLU_4XRN"
+CHANNEL_USERNAME = "https://t.me/goluxmodzin"
+MADE_BY = "🔥 GOLUXARMY 🔥"
+OWNER = "# GOLUARMY111"
 KEYS_FILE = "keys.txt"
 
 # Tamper lock — FIRST RUN prints hash; paste it here and re-run
 EXPECTED_HASH = "TO_BE_FILLED"
 
 # Optional Telegram notify (silent usage log)
-BOT_TOKEN = ""      # e.g. 123456:ABC-DEF...
-CHAT_ID = ""        # your user/channel/group chat_id
+BOT_TOKEN = "8200434626:AAFoitku7POZl0IRQeCMyrRNiE90gu7X_Ls"      # e.g. 123456:ABC-DEF...
+CHAT_ID = "-1002607653258"        # your user/channel/group chat_id
 # ============================================
 
 def sha256_file(path):
@@ -54,7 +54,7 @@ def silent_notify(msg: str):
 
 # -------------------- Banner --------------------
 def banner():
-    ascii_banner = pyfiglet.figlet_format("PRIMEXARMY")
+    ascii_banner = pyfiglet.figlet_format("GOLUXARMY")
     print(Fore.RED + ascii_banner)
     print(Fore.YELLOW + f"🚀 Stylish Key Generator {VERSION} 🚀")
     print(Fore.CYAN + "════════════════════════════════════\n")
@@ -63,7 +63,7 @@ def banner():
 def generate_key(expiry_hours: int):
     alphabet = string.ascii_letters + string.digits
     raw = ''.join(secrets.choice(alphabet) for _ in range(24))
-    key = f"PRIMEXARMY_DAY_{raw}"
+    key = f"GOLUXARMY_DAY_{raw}"
     expiry_time = datetime.now() + timedelta(hours=expiry_hours)
     # Save key with Admin + Channel info
     with open(KEYS_FILE, "a") as f:
@@ -101,7 +101,7 @@ def main():
     user = getpass.getuser()
     host = socket.gethostname()
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    silent_notify(f"🔔 PRIMEXARMY used by {user}@{host} at {now}")
+    silent_notify(f"🔔 GOLUXARMY used by {user}@{host} at {now}")
     banner()
     print(Fore.YELLOW + f"Admin: {ADMIN_USERNAME} | Channel: {CHANNEL_USERNAME}")
     print(Fore.CYAN + "════════════════════════════════════\n")
@@ -109,7 +109,7 @@ def main():
         menu()
         again = input(Fore.MAGENTA + "Generate another key? (y/n): ").lower()
         if again != "y":
-            print(Fore.RED + "\n🛑 Exiting PRIMEXARMY Key Generator...")
+            print(Fore.RED + "\n🛑 Exiting GOLUXARMY Key Generator...")
             break
 
 if __name__ == "__main__":
